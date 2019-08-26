@@ -3,7 +3,7 @@ ThoughtWorks Shokunin Challenge August 2019
 
 ## Running the Solution
 
-To run, copy contents of [./x10dev.prolog](https://github.com/safetydave/x10dev/blob/master/x10dev.prolog) into [SWISH interactive prolog editor](https://swish.swi-prolog.org)
+To run, copy contents of [./x10dev.prolog](https://github.com/safetydave/x10dev/blob/master/x10dev.prolog) into [SWISH interactive prolog editor](https://swish.swi-prolog.org) (click "Create a program here")
 
 ## Challenge Answers
 

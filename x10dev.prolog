@@ -36,5 +36,7 @@ invalid(X) :- adjacent('John', 'Evan', X).
 
 % Answers to challenge questions
 
-devrank(X) :- permutation(['Jessie','Evan','John', 'Sarah', 'Matt'], X), \+ invalid(X).
+devrank(X) :-
+  permutation(['Jessie', 'Evan', 'John', 'Sarah', 'Matt'], X),
+  \+ invalid(X).
 x10dev(X) :- devrank([X|_]).

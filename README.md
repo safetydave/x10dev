@@ -3,7 +3,7 @@ ThoughtWorks Shokunin Challenge August 2019
 
 ## Running the Solution
 
-To run, visit [this link](https://swish.swi-prolog.org/?code=https://raw.githubusercontent.com/safetydave/x10dev/master/x10dev.prolog&q=x10dev(D),devrank(Ds).) and click the run button at bottom right.
+**To run, visit [this link](https://swish.swi-prolog.org/?code=https://raw.githubusercontent.com/safetydave/x10dev/master/x10dev.prolog&q=x10dev(D),devrank(Ds).)** and click the run button at bottom right.
 
 The link above initialises the [SWISH interactive prolog editor](https://swish.swi-prolog.org) with the contents of [./x10dev.prolog](https://raw.githubusercontent.com/safetydave/x10dev/master/x10dev.prolog) and the queries below.
 

@@ -39,4 +39,5 @@ invalid(X) :- adjacent('John', 'Evan', X).
 devrank(X) :-
   permutation(['Jessie', 'Evan', 'John', 'Sarah', 'Matt'], X),
   \+ invalid(X).
+
 x10dev(X) :- devrank([X|_]).

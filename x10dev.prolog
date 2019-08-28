@@ -1,22 +1,17 @@
 % Shokunin August 2019
 % David Colls
 
+% Imports
+
+use_module(library(lists)).
+
 % Utility methods
-
-permutation([],[]).
-permutation(L, [H|T]) :-
-  append(V, [H|U], L),
-  append(V, U, W), permutation(W, T).
-
-last(X, [X]).
-last(X, [_|Z]) :- last(X, Z).
 
 precedes(X, Y, [X|T]) :- member(Y, T).
 precedes(X, Y, [_|T]) :- precedes(X, Y, T).
 
-adjacent(X, Y, [X|[Y|_]]).
-adjacent(X, Y, [Y|[X|_]]).
-adjacent(X, Y, [_|T]) :- adjacent(X, Y, T).
+adjacent(X, Y, L) :- nextto(X, Y, L).
+adjacent(X, Y, L) :- nextto(Y, X, L).
 
 % Here's what we know:
 % Jessie is not the best developer
@@ -27,9 +22,9 @@ adjacent(X, Y, [_|T]) :- adjacent(X, Y, T).
 % John is not directly below or above Evan as a developer
 
 invalid(['Jessie'|_]).
-invalid(X) :- last('Evan', X).
+invalid(X) :- last(X, 'Evan').
 invalid(['John'|_]).
-invalid(X) :- last('John', X).
+invalid(X) :- last(X, 'John').
 invalid(X) :- precedes('Evan', 'Sarah', X).
 invalid(X) :- adjacent('Matt', 'John', X).
 invalid(X) :- adjacent('John', 'Evan', X).

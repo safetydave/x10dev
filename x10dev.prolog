@@ -20,12 +20,13 @@ adjacent(X, Y, L) :- nextto(X, Y, L); nextto(Y, X, L).
 % Matt is not directly below or above John as a developer
 % John is not directly below or above Evan as a developer
 
-invalid(['Jessie'|_]).
-invalid(X) :- last(X, 'Evan').
-invalid(X) :- X = ['John'|_]; last(X, 'John').
-invalid(X) :- precedes('Evan', 'Sarah', X).
-invalid(X) :- adjacent('Matt', 'John', X).
-invalid(X) :- adjacent('John', 'Evan', X).
+invalid(X) :-
+  X = ['Jessie'|_];
+  last(X, 'Evan');
+  X = ['John'|_]; last(X, 'John');
+  precedes('Evan', 'Sarah', X);
+  adjacent('Matt', 'John', X);
+  adjacent('John', 'Evan', X).
 
 % Answers to challenge questions
 

@@ -1,5 +1,6 @@
 % Evidence of TDD
 % Recreated by CSI team from eyewitness reports of interactive session
+% Played with https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/plunit.html%27) but seems it doesn't run in SWISH sandbox
 
 % Assert definitions
 assert_true(X) :-
